@@ -1,0 +1,32 @@
+/* TipTap Editor */
+
+button.tiptap-tool + .tiptap-panel {
+    @apply shadow-lg;
+}
+
+.tiptap-prosemirror-wrapper,
+.tiptap-prosemirror-wrapper + .hidden .h-full {
+    max-height: 365px;
+}
+
+html.dark .tiptap-prosemirror-wrapper + .hidden {
+    background-color: rgba(var(--gray-700), var(--tw-text-opacity, 1));
+}
+
+html:not(.dark) .tiptap-tool + .tiptap-panel {
+    color: rgba(var(--gray-800), var(--tw-text-opacity, 1));
+}
+
+/* Block Preview */
+
+.tiptap-block .preview span[data-type="mergeTag"] {
+    padding: 4px 8px;
+}
+
+html.dark .tiptap-block .preview span[data-type="mergeTag"] {
+    background-color: rgba(var(--gray-700), var(--tw-text-opacity, 1));
+}
+
+html:not(.dark) .tiptap-block .preview span[data-type="mergeTag"] {
+    background-color: rgba(var(--gray-200), var(--tw-text-opacity, 1));
+}
